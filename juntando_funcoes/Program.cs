@@ -9,7 +9,8 @@ class Program
 
         while (continuar)
         {
-            Console.WriteLine("Escolha uma opção abaixo:");
+            Console.WriteLine("Ola Seja Bem-Vindo(a)");
+            Console.WriteLine("Escolha uma opção das opções abaixo:");
             Console.WriteLine("-------------------");
             Console.WriteLine("1 - Saudação");
             Console.WriteLine("2 - Ler Arquivo");

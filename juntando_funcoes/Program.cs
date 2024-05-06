@@ -45,11 +45,21 @@ class Program
             }
 
             Console.WriteLine("\nDeseja selecionar outra opção? (s/n)");
-            string resposta = Console.ReadLine();
-            if (resposta.ToLower() != "s")
+            string resposta;
+            do
+            {
+                resposta = Console.ReadLine().ToLower();
+                if (resposta != "s" && resposta != "n")
+                {
+                    Console.WriteLine("Digite S ou N para continuar");
+                }
+            } while (resposta != "s" && resposta != "n");
+
+            if (resposta == "n")
             {
                 continuar = false;
             }
+
         }
     }
 
@@ -90,7 +100,7 @@ class Program
         {
             // Verifica se o arquivo tem uma extensão suportada
             string extensao = Path.GetExtension(caminho).ToLower();
-            if (extensao == ".txt" || extensao == ".csv" || extensao == ".xml" || extensao == ".json" || extensao == ".xlsx" || extensao == ".ods")
+            if (extensao == ".txt" || extensao == ".csv" || extensao == ".xml" || extensao == ".json" || extensao == ".xlsx")
             {
                 Arquivo.LerArquivo(caminho);
             }

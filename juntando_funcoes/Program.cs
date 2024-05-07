@@ -13,15 +13,17 @@ class Program
 
         while (continuar)
         {
-            Console.WriteLine("Ola Seja Bem-Vindo(a)\n");
-            Console.WriteLine("Escolha uma opção das opções abaixo:");
-            Console.WriteLine("-------------------");
-            Console.WriteLine("1 - Saudação");
-            Console.WriteLine("2 - Ler Arquivo");
-            Console.WriteLine("3 - Exibir Tabuada");
-            Console.WriteLine("4 - Maior Idade");
-            Console.WriteLine("5 - Sair");
-            Console.WriteLine("-------------------");
+            string mensagem = "Ola Seja Bem-Vindo(a)\n" +
+                "\n" +
+                "Escolha uma das opções do menu abaixo:"+
+                "\n -------------------" +
+                "\n 1 - Saudação" +
+                "\n 2 - Ler Arquivo" +
+                "\n 3 - Exibir Tabuada" +
+                "\n 4 - Maior Idade" +
+                "\n 5 - Sair " +
+                "\n -------------------";
+            Console.WriteLine(mensagem);
 
             int escolha;
             if (!int.TryParse(Console.ReadLine(), out escolha) || escolha < 1 || escolha > 5)
@@ -46,7 +48,7 @@ class Program
                     break;
                 case 5:
                     continuar = false;
-                    break;
+                   break;
             }
 
             Console.WriteLine("\nDeseja selecionar outra opção? (s/n)");

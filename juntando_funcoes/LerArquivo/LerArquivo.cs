@@ -9,7 +9,7 @@ namespace juntando_funcoes.LerDocumento
      class LerDocumento
     {
          public static void LerArquivo()
-        {
+         {
             Console.WriteLine("Informe o caminho do arquivo:");
             string caminho = Console.ReadLine();
 

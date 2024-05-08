@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace juntando_funcoes.CalculoMedia
+namespace juntando_funcoes.Funções.CalculoMedia
 {
     public class Calculo
     {
@@ -17,7 +17,7 @@ namespace juntando_funcoes.CalculoMedia
             List<double> notas = new List<double>();
             for (int i = 0; i < qtdNotas; i++)
             {
-                Console.WriteLine("Digite a " + (i + 1)+ "º nota" + " de " + nome);
+                Console.WriteLine("Digite a " + (i + 1) + "º nota" + " de " + nome);
                 double nota;
                 bool notaValida;
                 do

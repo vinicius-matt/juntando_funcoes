@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using juntando_funcoes.Menu;
 
-namespace juntando_funcoes.LerDocumento
+namespace juntando_funcoes.Funções.LerArquivo
 {
-     class LerDocumento
+    class LerDocumento
     {
-         public static void LerArquivo()
-         {
+        public static void LerArquivo()
+        {
             Console.WriteLine("Informe o caminho do arquivo:");
             string caminho = Console.ReadLine();
 

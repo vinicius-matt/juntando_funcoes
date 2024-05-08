@@ -4,6 +4,7 @@ using juntando_funcoes.saudar;
 using juntando_funcoes.LerDocumento;
 using juntando_funcoes.Tabuada;
 using juntando_funcoes.Idade;
+using juntando_funcoes.CalculoMedia;
 
 class Program
 {
@@ -21,14 +22,15 @@ class Program
                 "\n 2 - Ler Arquivo" +
                 "\n 3 - Exibir Tabuada" +
                 "\n 4 - Maior Idade" +
-                "\n 5 - Sair " +
+                "\n 5 - Calcular Média" +
+                "\n 6 - Sair " +
                 "\n -------------------";
             Console.WriteLine(mensagem);
 
             int escolha;
-            if (!int.TryParse(Console.ReadLine(), out escolha) || escolha < 1 || escolha > 5)
+            if (!int.TryParse(Console.ReadLine(), out escolha) || escolha < 1 || escolha > 6)
             {
-                Console.WriteLine("Por favor, insira uma opção válida (1 a 5).");
+                Console.WriteLine("Por favor, insira uma opção válida (1 a 6).");
                 continue;
             }
 
@@ -46,7 +48,9 @@ class Program
                 case 4:
                     CalcularIdade.Dados();
                     break;
-                case 5:
+                case 5:Calculo.CalcularMediaAlunos();
+                    break;
+                case 6:
                     continuar = false;
                    break;
             }
